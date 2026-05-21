@@ -47,6 +47,6 @@ jobs:
       - name: list content
         run: ls
       - name: print scrpt filename
-        run: echo ${{ jobs.build.outputs.script-file }}
+        run: echo ${{ needs.build.outputs.script-file }}
       - name: Deploy
         run: echo "Deploying"
